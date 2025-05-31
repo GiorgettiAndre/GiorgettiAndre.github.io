@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Progetto</title>
+    <style>
+        body {
+            background: #f6f8fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 40px 24px 40px;
+        }
+        header {
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+        }
+        header h1 {
+            margin: 0 0 12px 0;
+            font-size: 2.3em;
+            color: #2c3e50;
+            letter-spacing: 1px;
+        }
+        nav ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 24px;
+        }
+        nav li {
+            position: relative;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+        .menu-hover {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-hover .indice {
+            display: none;
+            position: absolute;
+            top: 120%;
+            left: 0;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+            padding: 12px 18px;
+            min-width: 210px;
+            z-index: 10;
+        }
+        .menu-hover:hover .indice,
+        .menu-hover:focus-within .indice {
+            display: block;
+        }
+        .indice ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .indice li {
+            margin-bottom: 0;
+        }
+        .indice a {
+            color: #34495e;
+            font-weight: 400;
+            padding: 4px 0;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.15s;
+        }
+        .indice a:hover {
+            background: #eaf6fb;
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        main {
+            margin-top: 32px;
+        }
+        main h2 {
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+        .project-section {
+            font-size: 1.08em;
+            color: #444;
+            line-height: 1.7;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 18px 22px;
+            box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+            margin-bottom: 28px;
+        }
+        .project-img {
+            display: block;
+            margin: 18px auto 28px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(44,62,80,0.08);
+            max-width: 100%;
+        }
+        footer {
+            margin-top: 48px;
+            padding-top: 18px;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 0.98em;
+            text-align: center;
+        }
+        .back-home {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: #2980b9;
+            background: #eaf6fb;
+            border-radius: 6px;
+            padding: 6px 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .back-home:hover {
+            background: #1abc9c;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 6px;
+            }
+            nav ol {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Progetto "Chi fa dialogare gli oggetti"</h1>
+            <nav>
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="PCTO.html">PCTO</a></li>
+                    <li>
+                        <span class="menu-hover" tabindex="0">Materie scolastiche
+                            <div class="indice">
+                                <ol>
+                                    <li><a href="materie/Civica.html">Civica</a></li>
+                                    <li><a href="materie/EdFisica.html">Educazione Fisica</a></li>
+                                    <li><a href="materie/GPOI.html">GPOI</a></li>
+                                    <li><a href="materie/IA.html">Intelligenza artificiale</a></li>
+                                    <li><a href="materie/Informatica.html">Informatica</a></li>
+                                    <li><a href="materie/Inglese.html">Inglese</a></li>
+                                    <li><a href="materie/Italiano.html">Italiano</a></li>
+                                    <li><a href="materie/Matematica.html">Matematica</a></li>
+                                    <li><a href="materie/Religione.html">Religione</a></li>
+                                    <li><a href="materie/Sistemi&Reti.html">Sistemi e reti</a></li>
+                                    <li><a href="materie/Storia.html">Storia</a></li>
+                                    <li><a href="materie/TPSIT.html">TPSIT</a></li>
+                                </ol>
+                            </div>
+                        </span>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <section class="project-section">
+                <p>
+                    Durante quest'anno scolastico ho partecipato a un corso dedicato all'Internet of Things (<a href="https://it.wikipedia.org/wiki/Internet_delle_cose" target="_blank">IoT</a>), in cui, insieme ad altri studenti, ho sviluppato un sistema per  
+                    il rilevamento delle presenze in un determinato ambiente.<br>
+                    Il dispositivo, basato su Arduino, utilizzava tag RFID personali da appoggiare su uno scanner per registrare l'ingresso degli utenti, inviando poi i dati a un  
+                    database centralizzato. Per permettere la comunicazione tra il dispositivo e il server, abbiamo realizzato una web service e, infine, sviluppato anche un sito  
+                    web per consultare e gestire in modo semplice i dati raccolti.<br>
+                    È stata un'esperienza molto utile, che mi ha permesso di mettere in pratica le conoscenze acquisite a scuola, approfondendo tematiche legate all'hardware e al  
+                    networking. Inoltre, ho potuto migliorare il lavoro di squadra, mettendo in pratica le mie capacità di leadership in qualità di supervisore del progetto.<br>
+                    <br>
+                    Il <a href="https://presenze.sviluppo.host/temp/index.php" target="_blank">sito</a> è pubblico ed è possibile visitarlo attraverso il sito istituzionale dell'IIS Marconi Pieralisi.
+                </p>
+                <img class="project-img" src="../immagini/SchemaGenerale.png" alt="Schema progetto 'chi fa dialogare gli oggetti'" width="50%">
+            </section>
+        </main>
+        <footer>
+            <p>Andrea Giorgetti</p>
+            <p>IIS Marconi Pieralisi,<br>
+                Via Raffaello Sanzio, 8, 60035 Jesi AN
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

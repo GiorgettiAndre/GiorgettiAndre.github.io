@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Matematica</title>
+    <!-- MathJax per usare le formule -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background: #f6f8fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 40px 24px 40px;
+        }
+        header {
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+        }
+        header h1 {
+            margin: 0 0 12px 0;
+            font-size: 2.3em;
+            color: #2c3e50;
+            letter-spacing: 1px;
+        }
+        .subject-section {
+            font-size: 1.08em;
+            color: #444;
+            line-height: 1.7;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 18px 22px;
+            box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+            margin-bottom: 28px;
+        }
+        .back-home {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: #2980b9;
+            background: #eaf6fb;
+            border-radius: 6px;
+            padding: 6px 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.15s, color 0.15s;
+        }
+        .back-home:hover {
+            background: #1abc9c;
+            color: #fff;
+        }
+        footer {
+            border-top: 1.5px solid #e0e0e0;
+            margin-top: 36px;
+            padding-top: 16px;
+            text-align: center;
+            color: #888;
+            font-size: 1em;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 6vw 16px 6vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Matematica</h1>
+        </header>
+        <main>
+            <a class="back-home" href="../../index.html">&larr; Torna alla Home</a>
+            <section class="subject-section">
+                <p>
+                    Quest'anno l'argomento che mi è piaciuto di più, tra tutti, è la funzione a 2 variabili, dove in particolare abbiamo visto il dominio, le linee di livello e la ricerca dei punti min, max e sella:
+                </p>
+                <ol>
+                    <li><b>Dominio:</b> insieme dei punti \((x, y)\) per cui la funzione \(f(x, y)\) è definita. <br>
+                        Ad esempio, la funzione \(f(x, y) = \sqrt{x^2 + y^2}\) ha dominio tutto \(\mathbb{R}^2\), oppure la funzione \(f(x, y) = \dfrac{1}{x - y}\)
+                        <b>non</b> è definita lungo la retta \(x = y\), quindi il dominio è tutto \(\mathbb{R}^2\) tranne in \(\{(x, y) \mid x = y\}\).
+                    </li><br>
+                    <li><b>Linee di livello:</b> sono le curve in cui la funzione assume lo stesso valore, cioè l'insieme dei punti \((x, y)\) tali che \(f(x, y) = k\), con \(k \in \mathbb{R}\). <br>
+                        Per esempio, se \(f(x, y) = x^2 + y^2\), le linee di livello sono cerchi concentrici: \(x^2 + y^2 = k\), ovvero una circonferenza
+                        di centro \(C(0, 0)\) e raggio = \(k\).
+                    </li><br>
+                    <li><b>Punti min, max e sella:</b> si trovano cercando i punti critici, ovvero dove \(\nabla f(x, y) = 0\). <br>
+                        Poi si usa il discriminante \(D =\nabla\nabla f_{xx}\nabla\nabla f_{yy} - (\nabla\nabla f_{xy})^2\) per determinare la natura del punto critico sostituendo
+                        i valori \(x\) e \(y\) per ogni punto critico nelle formule:
+                        <ul>
+                            <li>Se \(D > 0\) e \(f_{xx} > 0\): minimo locale.</li>
+                            <li>Se \(D > 0\) e \(f_{xx} < 0\): massimo locale.</li>
+                            <li>Se \(D < 0\): punto di sella.</li>
+                            <li>Se \(D = 0\): punto senza significato.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+        </main>
+        <footer>
+            <p>Andrea Giorgetti</p>
+            <p>IIS Marconi Pieralisi, <br>
+                Via Raffaello Sanzio, 8, 60035 Jesi AN
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

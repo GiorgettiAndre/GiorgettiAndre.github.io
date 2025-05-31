@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligenza Artificiale</title>
+    <!-- MathJax per usare le formule -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background: #f6f8fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 40px 24px 40px;
+        }
+        header {
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+        }
+        header h1 {
+            margin: 0 0 12px 0;
+            font-size: 2.3em;
+            color: #2c3e50;
+            letter-spacing: 1px;
+        }
+        .subject-section {
+            font-size: 1.08em;
+            color: #444;
+            line-height: 1.7;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 18px 22px;
+            box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+            margin-bottom: 28px;
+        }
+        .subject-img {
+            display: block;           /* Per centrare con margin auto */
+            margin: 24px auto 32px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(44,62,80,0.08);
+            max-width: 55%;           /* Ingrandito rispetto a prima */
+        }
+        .back-home {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: #2980b9;
+            background: #eaf6fb;
+            border-radius: 6px;
+            padding: 6px 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .back-home:hover {
+            background: #1abc9c;
+            color: #fff;
+        }
+        footer {
+            margin-top: 48px;
+            padding-top: 18px;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 0.98em;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 6px;
+            }
+            .subject-img {
+                max-width: 80%;
+                display: block;
+                margin: 18px auto 28px auto;
+            }
+        }
+        .img-numbered {
+            position: relative;
+            display: inline-block;
+            margin: 24px auto 32px auto;
+            width: 100%;
+            text-align: center;
+        }
+        .img-label {
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            background: rgba(255,255,255,0.85);
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 2px 8px;
+            border-radius: 6px;
+            z-index: 2;
+            box-shadow: 0 1px 3px rgba(44,62,80,0.08);
+        }
+        .img-numbered img.subject-img {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Intelligenza Artificiale</h1>
+        </header>
+        <main>
+            <a class="back-home" href="../../index.html">&larr; Torna alla Home</a>
+            <section class="subject-section">
+                <p>
+                    Questa è sicuramente una delle materie più particolari e innovative che abbiamo affrontato, perché tratta argomenti di grande attualità e in continua evoluzione. Non si tratta
+                    ancora di una materia ufficialmente istituzionalizzata, e infatti la nostra scuola è tra le prime in Italia ad averla introdotta all'interno del percorso di informatica. In
+                    questo corso studiamo l'intelligenza artificiale sia da un punto di vista teorico che pratico, utilizzando principalmente il linguaggio Python.<br>
+                    Uno degli argomenti più affascinanti che abbiamo approfondito è la rete neurale artificiale, che costituisce la base di funzionamento dei cosiddetti “bot intelligenti”, un po'
+                    come i neuroni nel cervello umano. Una rete neurale è composta da neuroni artificiali (o perceptron), ognuno dei quali è una sorta di "unità di calcolo" che somma gli input ricevuti,
+                    ognuno pesato con un certo valore, e li elabora attraverso una funzione chiamata funzione di attivazione.
+                </p>
+                <!-- Sostituisci le immagini così -->
+                <div class="img-numbered">
+                    <span class="img-label">1)</span>
+                    <img class="subject-img" src="../../immagini/neurone.png" alt="esempio di un percettrone">
+                </div>
+                <div class="img-numbered">
+                    <span class="img-label">2)</span>
+                    <img class="subject-img" src="../../immagini/funzionediattivazione.jpg" alt="funzione di attivazione">
+                </div>
+                <p>
+                    Come si può vedere dalla prima immagine, un neurone è composto da:
+                </p>
+                <ol>
+                    <li>Gli input \(x\) (in genere booleani come 0 o 1), che rappresentano i dati da elaborare in base al problema affrontato dalla rete.</li>
+                    <li>I pesi \(w\), cioè dei numeri reali che modulano l'importanza di ogni input, questi pesi vengono scelti durante l'addestramento o a mano o tramite il meccanismo
+                        della error back-propagation, tramite la derivazione delle funzioni e la discesa del gradiente.</li>
+                    <li>Il bias Ø, che serve a regolare la soglia della funzione di attivazione, spostando il punto di attivazione verso l'alto o verso il basso.</li>
+                    <li>La funzione di attivazione \(\varphi\), che trasforma il risultato numerico della somma pesata in un valore di output, spesso booleano o normalizzato. Di solito
+                        si utilizzano particolari funzioni (sigmoide) e non un gradino steccato (come la seconda immagine, usata per praticità) che, non essendo derivabile, non permette
+                        l'utilizzo della error back-propagation.</li>
+                </ol>
+                <p>
+                    In sintesi, il comportamento matematico di un neurone artificiale può essere descritto con la formula:<br>
+                    \( y_k = \varphi\left( \sum_{j=0}^{m} w_{kj} x_j \right) \)<br>
+                    Questo modello è detto “caricaturale” ed è stato proposto per la prima volta nel 1943 da McCulloch e Pitts, durante lo studio del funzionamento dei neuroni biologici.<br>
+                    Successivamente, nel 1957, Rosenblatt ha sviluppato un primo classificatore automatico basato su questo modello, chiamato percettrone, ispirandosi al funzionamento della corteccia
+                    visiva.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>Andrea Giorgetti</p>
+            <p>IIS Marconi Pieralisi,<br>
+                Via Raffaello Sanzio, 8, 60035 Jesi AN
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
